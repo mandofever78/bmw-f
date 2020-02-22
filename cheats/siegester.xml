@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--Rev1-->	
+	<!--siegester-->
+    <cafd id="00007083" name="BDC_BODY3" author="siegester" series="S18A">
+		<code description="(1/2) Driver's seat heat distribution settings (SM2)">
+			<group id="3090">
+				<function start="2" end="2" comment="SITZHEIZUNG_FOND_schichtung" mask="00010000b">aktiv</function>
+				<function start="1" end="1" comment="SITZHEIZUNG_FRONT_schichtung" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+		<code description="(2/3) Automatically Enable Steering Wheel Heater at Set Temperature (HU_MGU)">
+			<group id="3142">
+				<function start="2" end="2" comment="LHZ_CCM_IKF" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+		<code description="(1/3) Enable Automatic Lane Change Assistant (HU_MGU & SAS2)">
+			<group id="3420">
+				<function start="10" end="10" comment="SPURWECHSEL_ASSISTENT" mask="00000011b">aktiv</function>
+			</group>
+		</code>
+        <code description="(1/3) Automatically Enable Steering Wheel Heater at Set Temperature (HU_MGU)">
+			<group id="3450">
+				<function start="0" end="0" comment="IKF_ENABLE" mask="00000110b">ikf_alle_sitze</function>
+			</group>
+		</code>
+	</cafd>
+
+	<cafd id="00003E52" name="HU_MGU" author="siegester" series="S18A">
+		<code description="(3/3) Automatically Enable Steering Wheel Heater at Set Temperature (BDC_BODY3)">
+			<group id="3000">
+				<function start="47" end="47" comment="AKT_Auto_Lenkrad" mask="00000100b">aktiv</function>
+			</group>
+		</code>
+		<code description="(2/3) Enable Automatic Lane Change Assistant (BDC_BODY & SAS2)">
+			<group id="300A">
+				<function start="11" end="11" comment="SPURWECHSELASSISTENT" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+
+	<cafd id="000042C1" name="SAS2" author="siegester" series="S18A">
+		<code description="(3/3) Enable Automatic Lane Change Assistant (BDC_BODY3 & HU_MGU)">
+            <group id="3000">
+                <function start="137" end="137" comment="C_SWA_VORHANDEN" mask="11111111b">NR001_VORHANDEN</function>
+            </group>
+        </code>
+	</cafd>
+
+    <cafd id="00002259" name="SM2" author="siegester" series="S18A">
+		<code description="(2/2) Driver's seat heat distribution settings (BDC_BODY3)">
+            <group id="300d">
+                <function start="0" end="0" comment="SHZ_TYP" mask="00000011b">werte_02</function>
+            </group>
+        </code>
+	</cafd>
+</FDL>
